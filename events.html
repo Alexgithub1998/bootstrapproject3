@@ -1,0 +1,303 @@
+<html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events - Fine Dining Restaurant</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+:root {
+    --primary-color: #1A1A1A;
+    --accent-color: #C8A97E;
+    --text-color: #333333;
+    --light-bg: #F8F9FA;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    padding-top: 76px;
+}
+
+.navbar {
+    background-color: var(--light-bg);
+    padding: 1rem 0;
+}
+
+.navbar-brand img {
+    height: 50px;
+}
+
+.nav-link {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-color);
+}
+
+.events-section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.event-card {
+    margin-bottom: 2rem;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.event-date {
+    background: var(--accent-color);
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.event-title {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.event-details {
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.event-price {
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.btn-book {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-book:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.footer {
+    background: var(--primary-color);
+    color: white;
+    padding: 3rem 0;
+    margin-top: 2rem;
+}
+
+.pagination {
+    margin-top: 2rem;
+}
+
+.page-link {
+    color: var(--primary-color);
+    border: none;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.page-link:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.page-item.active .page-link {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <img src="images/logo-mayon.jpg" alt="Restaurant Logo">
+            <span>Mt. Mayon Fine Dining</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="drinks.html">Drinks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="events.html">Events</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="crew.html">Crew</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="events-section">
+    <div class="container">
+        <h2 class="section-title">Upcoming Events</h2>
+        <div class="row events-container">
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card event-card">
+                    <img src="images/winetasting.jpg" class="card-img-top event-img" alt="Wine tasting event setup with elegant table settings">
+                    <div class="event-date">Dec 15, 2024</div>
+                    <div class="card-body">
+                        <h5 class="event-title">Wine Tasting Evening</h5>
+                        <p class="event-details">Join us for an exclusive wine tasting experience featuring premium selections from renowned vineyards.</p>
+                        <div class="event-price">$75 per person</div>
+                        <button class="btn btn-book">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card event-card">
+                    <img src="images/cookingclass.jpg" class="card-img-top event-img" alt="Cooking class setup with chef demonstration">
+                    <div class="event-date">Dec 20, 2024</div>
+                    <div class="card-body">
+                        <h5 class="event-title">Master Chef Workshop</h5>
+                        <p class="event-details">Learn the secrets of fine dining from our executive chef in this hands-on cooking workshop.</p>
+                        <div class="event-price">$120 per person</div>
+                        <button class="btn btn-book">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card event-card">
+                    <img src="images/jazz.jpg" class="card-img-top event-img" alt="Jazz band performing in restaurant">
+                    <div class="event-date">Dec 25, 2024</div>
+                    <div class="card-body">
+                        <h5 class="event-title">Christmas Jazz Night</h5>
+                        <p class="event-details">Enjoy a magical evening of live jazz music while savoring our special holiday menu.</p>
+                        <div class="event-price">$95 per person</div>
+                        <button class="btn btn-book">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card event-card">
+                    <img src="images/newyear.jpg" class="card-img-top event-img" alt="New Year's Eve celebration setup">
+                    <div class="event-date">Dec 31, 2024</div>
+                    <div class="card-body">
+                        <h5 class="event-title">New Year's Eve Gala</h5>
+                        <p class="event-details">Welcome 2024 with an extraordinary 7-course dinner and champagne celebration.</p>
+                        <div class="event-price">$150 per person</div>
+                        <button class="btn btn-book">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav aria-label="Events navigation" class="d-flex justify-content-center">
+            <ul class="pagination">
+                <li class="page-item active"><a class="page-link" href="javascript:void(0)" data-page="1">1</a></li>
+                <li class="page-item"><a class="page-link" href="javascript:void(0)" data-page="2">2</a></li>
+                <li class="page-item"><a class="page-link" href="javascript:void(0)" data-page="3">3</a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Location</h5>
+                <p>Barangay San Rafael<br>Santo Domingo<br>Albay</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Hours</h5>
+                <p>Monday - Sunday<br>Lunch: 11:30 AM - 2:30 PM<br>Dinner: 6:00 PM - 10:30 PM</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Contact</h5>
+                <p>Phone: 09759758523<br>Email: alexbalaoro45@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const events = document.querySelectorAll('.events-container .col-md-6');
+    const paginationLinks = document.querySelectorAll('.page-link');
+    const itemsPerPage = 4;
+    let currentPage = 1;
+
+    function showPage(pageNum) {
+        const start = (pageNum - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+
+        events.forEach((item, index) => {
+            if (index >= start && index < end) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+
+        paginationLinks.forEach(link => {
+            link.parentElement.classList.remove('active');
+            if (parseInt(link.getAttribute('data-page')) === pageNum) {
+                link.parentElement.classList.add('active');
+            }
+        });
+    }
+
+    paginationLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const pageNum = parseInt(this.getAttribute('data-page'));
+            currentPage = pageNum;
+            showPage(currentPage);
+        });
+    });
+
+    showPage(currentPage);
+});
+</script>
+</body>
+</html>
